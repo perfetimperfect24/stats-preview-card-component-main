@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+*{
+    margin:0;
+}
+:root{  
+    /* -----------Primary---------- */
+    --very-dark-blue: hsl(233, 47%, 7%); 
+    --dark-desaturated-blue: hsl(244, 38%, 16%);
+    --soft-violet: hsl(277, 64%, 61%);
+    /* -----------------Neutral----------- */
+    --white: hsl(0, 0%, 100%);
+    --lightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+    --slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+} 
+body{
+    background-color: var(--very-dark-blue);
+    display: flex;
+    justify-content: center;
+    font-family:"Inter";
+}
+.container{
+    width:70vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--dark-desaturated-blue);
+    margin-top:20vh;
+    border-radius:5px;
+}
+.image-content{
+    position: relative;
+}
+.image-content::before{
+    content: "";
+    width:100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(140,20,252,0.3);
+}
+img{
+    height: 60vh;
+    width:40vw;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+h1{
+    font-family:"Lexend Deca";
+    color: var(--white);
+    font-size: 2 rem;
+}
+.heading{
+    padding: 50px 60px 10px 50px;
+}
+.content{
+    width:25vw;
+    padding:10px 60px 10px 50px;
+}
+p{
+    color: var(--slightly-transparent-white);
+    font-size:15px;
+    line-height: 1.5;
+}
+.footer{
+    margin-top:70px;
+    width:30vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-left: 10px;
+    padding-left:2vh;
+}
+.footer p{
+    font-family: "Inter";
+    color:var(--slightly-transparent-white)
+}
+h3{
+    color:var(--lightly-transparent-white);
+}
+.attribution{
+    color:white;
+}
+@media screen and(max-width:500px) {
+    body{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        height: 80vh;
+        width:420px;
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+    .footer{
+        margin-left: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    img{
+        width: 420px;
+        height:30vh;
+    }
+    .content{
+        width: 350px;
+    }
+}
